@@ -577,6 +577,7 @@ footer .wrap:last-child{
   -webkit-text-stroke:0.9px var(--text-dim);
   color:transparent;
 }
+     .ticker{display:none;}
   .hero .frame-tag{right:10px; bottom:24px; color:var(--text-dim);}
   .readout{grid-template-columns:repeat(2,1fr);}
   .readout-item:nth-child(3){border-left:none;}
@@ -593,6 +594,7 @@ footer .wrap:last-child{
     flex-direction:column; margin:0 20px; border-radius:8px;
     display:none;
   }
+     .ticker{display:none;}
   .links.open{display:flex;}
   .links a{width:100%; text-align:center;}
   .readout{grid-template-columns:1fr 1fr;}
