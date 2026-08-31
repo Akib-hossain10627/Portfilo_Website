@@ -5,8 +5,8 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // ---- update these two before publishing ----
-document.getElementById("linkedin-link").href = "https://www.linkedin.com/in/akibhossain";
-document.getElementById("github-link").href = "https://github.com/akibhossain";
+document.getElementById("linkedin-link").href = "https://www.linkedin.com/in/akib-hossain-a82800374";
+document.getElementById("github-link").href = "https://https://github.com/Akib-hossain10627?tab=repositories";
 
 // ---- mobile nav toggle ----
 const navToggle = document.getElementById("nav-toggle");

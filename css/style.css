@@ -133,7 +133,7 @@ body{
   position:relative;
   min-height:88vh;
   display:flex;
-  align-items:flex-end;
+  align-items:center;
   overflow:hidden;
   border-bottom:1px solid var(--line);
 }
@@ -146,8 +146,8 @@ body{
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:75% 25%;
-  filter:grayscale(35%) contrast(1.06) brightness(.82);
+  object-position:65% 25%;
+  filter:grayscale(35%) contrast(1.06) brightness(.84);
 }
 .hero-bg::after{
   content:"";
@@ -162,22 +162,22 @@ body{
   font-family:var(--mono); font-size:16px; letter-spacing:.06em; text-transform:uppercase;
 }
 .hero .frame-tag{right:250px; bottom:24px; color:var(--text-dim);}
-.hero .frame-corner{top:28px; right:28px; color:var(--accent);}
+.hero .frame-corner{top:28px; right:90px; color:var(--accent);}
 .hero-copy{
   position:relative;
   z-index:2;
   max-width:980px;
-  padding:0px 0px 72px 0px;
+  padding:0px 400px 52px 0px;
 }
 .hero-copy .eyebrow{
-  display:inline-flex; align-items:center; gap:8px;
+  display:inline-flex; align-items:center; gap:12px;
   font-family:var(--mono);
-  font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+  font-size:14px; letter-spacing:.08em; text-transform:uppercase;
   color:var(--accent-2);
   border:1px solid var(--line);
   background:var(--surface);
-  padding:7px 14px;
-  border-radius:100px;
+  padding:10px 14px;
+  border-radius:120px;
   margin-bottom:26px;
 }
 .pulse-dot{
@@ -195,15 +195,17 @@ body{
 .hero h1{
   font-family:var(--display);
   font-weight:700;
-  font-size:clamp(38px, 5.2vw, 72px);
+  font-size:clamp(24px, 4.2vw, 48px);
   line-height:1.04;
   letter-spacing:-.01em;
   text-transform:uppercase;
   margin-bottom:22px;
 }
 .hero h1 .accent{color:var(--accent);}
+.hero h1 .accent-2{font-size:clamp(20px,3.2vw,36px)}
 .hero h1 .outline{
-  -webkit-text-stroke:1.5px var(--text-dim);
+  font-size: 36px;
+  -webkit-text-stroke:0.9px var(--text-dim);
   color:transparent;
 }
 
@@ -245,10 +247,11 @@ body{
   border:1px solid var(--line);
   border-radius:2px;
   overflow:hidden;
+  align-items:center;
   margin:50px  50px;
 }
 .readout-item{
-  padding:26px 22px;
+  padding:26px 20px;
   border-left:1px solid var(--line);
   background:var(--surface);
 }
@@ -323,7 +326,7 @@ body{
   font-size:14.5px;
   color:var(--text);
   min-height:96px;
-  display:flex; align-items:flex-end;
+  display:flex; align-items:center;
   transition:background .2s ease, color .2s ease;
 }
 .competency-card:hover{background:var(--accent-soft); color:var(--accent);}
@@ -507,25 +510,25 @@ body{
 /* ---------------- footer ---------------- */
 footer{
   border-top:1px solid var(--line);
-  padding:64px 0 0;
+  padding:64px 0px 0px;
 }
 .footer-row{
   display:flex; justify-content:space-between; align-items:flex-start;
-  flex-wrap:wrap; gap:24px;
-  padding-bottom:40px;
+  flex-wrap:wrap; gap:20px;
+  padding-bottom:30px;
 }
-.footer-note{font-family:var(--mono); font-size:12px; color:var(--text-faint); letter-spacing:.04em;}
+.footer-note{font-family:var(--mono); margin-left:20px; font-size:12px; color:var(--text-faint); letter-spacing:.04em;}
 .footer-links{display:flex; gap:24px;}
 .footer-links a{
   font-family:var(--mono); font-size:13px; letter-spacing:.04em; text-transform:uppercase;
-  color:var(--text-dim); border-bottom:1px solid transparent;
+  color:var(--text-dim); border-bottom:1px solid transparent;margin: 20px;
 }
 .footer-links a:hover{color:var(--accent); border-color:var(--accent);}
 footer .wrap:last-child{
   border-top:1px solid var(--line);
   padding:20px 0;
 }
-
+.brand{margin-left:20px;}
 /* ---------------- modal ---------------- */
 .modal-overlay{
   position:fixed; inset:0; z-index:100;
@@ -562,9 +565,19 @@ footer .wrap:last-child{
 
 /* ---------------- responsive ---------------- */
 @media (max-width:920px){
-  .hero{min-height:78vh;}
-  .hero-copy{padding:100px 0 56px; max-width:100%;}
-  .hero-bg img{object-position:60% 40%;}
+  .hero{min-height:60vh;}
+  .hero-copy{padding:100px 40px 56px; max-width:100%;}
+  .hero-bg img{object-position:90% 10%;}
+  .hero-bg::after{
+    background:
+      linear-gradient(180deg, rgba(10,10,11,.15) 0%, rgba(10,10,11,.5) 38%, rgba(10,10,11,.94) 72%, rgba(10,10,11,.98) 80%);
+  }
+  .hero h1 .outline{
+  font-size: 22px;
+  -webkit-text-stroke:0.9px var(--text-dim);
+  color:transparent;
+}
+  .hero .frame-tag{right:10px; bottom:24px; color:var(--text-dim);}
   .readout{grid-template-columns:repeat(2,1fr);}
   .readout-item:nth-child(3){border-left:none;}
   .competency-grid{grid-template-columns:repeat(2,1fr);}
